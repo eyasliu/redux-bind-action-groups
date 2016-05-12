@@ -1,5 +1,5 @@
-export function getList(){
+export function toggleDemo(){
   return {
-    type: 'GETLIST'
+    type: 'TOGGLE_DEMO'
   }
 }
