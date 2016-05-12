@@ -11,7 +11,7 @@ export default function bindActionGroups(actionGroups, dispatch){
   for(var i = 0; i < groupKeys.length; i++){
     var key = keys[i]
     var actionCreators = actionGroups[key]
-    if (typeof actionCreator === 'function') {
+    if (typeof actionCreators === 'object') {
       groupActionCreators[key] = bindActionCreators(actionCreators, dispatch)
     }
   }
