@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha",
     "test:watch": "mocha --compilers js:babel-register --recursive --watch src/**/__test__/*.js",
-    "build:lib": "babel src --ignore src/__test__ --out-dir lib "
+    "build:lib": "babel src --ignore src/__test__ --out-dir lib ",
+    "postinstall": "npm run build:lib"
   },
   "repository": {
     "type": "git",
