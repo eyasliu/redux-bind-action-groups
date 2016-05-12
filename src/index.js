@@ -10,9 +10,9 @@ export default function bindActionGroups(actionGroups, dispatch){
 
   for(var i = 0; i < groupKeys.length; i++){
     var key = keys[i]
-    var actionCreator = actionGroups[key]
+    var actionCreators = actionGroups[key]
     if (typeof actionCreator === 'function') {
-      groupActionCreators[key] = bindActionCreators(actionCreator, dispatch)
+      groupActionCreators[key] = bindActionCreators(actionCreators, dispatch)
     }
   }
 
