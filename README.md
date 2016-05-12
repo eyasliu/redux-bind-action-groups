@@ -1,5 +1,9 @@
 bind redux action to group, avoid action generate function name conflict
-[![Build Status](https://travis-ci.org/eyasliu/redux-bind-action-groups.svg)]
+
+
+[![Build Status](https://travis-ci.org/eyasliu/redux-bind-action-groups.svg?branch=master)](https://travis-ci.org/eyasliu/redux-bind-action-groups)
+
+
 # install 
 
 ```
