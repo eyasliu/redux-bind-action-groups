@@ -7,7 +7,7 @@ bind redux action to group, avoid action generate function name conflict
 # install 
 
 ```shell
-npm i -S redux-action-creator-groups
+npm i -S redux-bind-action-groups
 ```
 
 
