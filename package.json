@@ -1,6 +1,6 @@
 {
   "name": "redux-bind-action-groups",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "bind redux action creators function to group",
   "main": "lib/index.js",
   "scripts": {
