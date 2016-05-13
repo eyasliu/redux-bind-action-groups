@@ -6,14 +6,14 @@ bind redux action to group, avoid action generate function name conflict
 
 # install 
 
-```
+```shell
 npm i -S redux-action-creator-groups
 ```
 
 
 my two action creator files
 
-```
+```js
 // post.js
 export function getList(){
     return {
@@ -32,7 +32,7 @@ export function getList(){
 
 bind action creator
 
-```
+```js
 import * as postActions from './post';
 import * as photoActions from './photo';
 import {bindActionCreators} from 'redux';
@@ -50,7 +50,7 @@ this.props.getList();  // which getList will exec in post and photo
 
 ### useage
 
-```
+```js
 import bindActionGroups from 'redux-bind-action-groups';
 
 function mapDispatchToProps(dispatch){
