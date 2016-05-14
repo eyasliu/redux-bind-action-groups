@@ -15,6 +15,7 @@
   },
   "keywords": [
     "redux",
+    "bind",
     "action",
     "group"
   ],
