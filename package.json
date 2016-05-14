@@ -1,6 +1,6 @@
 {
   "name": "redux-bind-action-groups",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "bind redux action creators function to group",
   "main": "lib/index.js",
   "scripts": {
@@ -14,8 +14,9 @@
     "url": "git+https://github.com/eyasliu/redux-bind-action-groups.git"
   },
   "keywords": [
-    "lowdb",
-    "indexeddb"
+    "redux",
+    "action",
+    "group"
   ],
   "author": "Eyas",
   "license": "ISC",
