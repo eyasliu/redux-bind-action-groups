@@ -25,21 +25,46 @@ describe('test bindActionGroups', () => {
     })
   })
 
-  it('skip non-object values in the group object', () => {
+  it('skip non-object or func values in the group object', () => {
     const boundActionGroups = bindActionGroups({
       ...actionGroupObj,
       number: 10,
       str: 'hello',
       wow: undefined,
-      much: () => {},
       test: null,
-      // func: () => {}
     }, store.dispatch);
     // console.log(boundActionGroups, actionGroupObj)
     expect(
       Object.keys(boundActionGroups)
     ).toEqual(
       Object.keys(actionGroupObj)
+    )
+  })
+
+  it('value is pure object with function', () => {
+    const funcs = {
+      foo: () => {},
+      bar: () => {},
+    }
+    const boundActionGroups = bindActionGroups(funcs, store.dispatch);
+    expect(
+      Object.keys(boundActionGroups)
+    ).toEqual(
+      Object.keys(funcs)
+    )
+  })
+
+  it('value have object and function', () => {
+    const func = {
+      foo: () => {},
+      bar: () => {},
+      actionGroupObj
+    }
+    const boundActionGroups = bindActionGroups(func, store.dispatch);
+    expect(
+      Object.keys(boundActionGroups)
+    ).toEqual(
+      Object.keys(func)
     )
   })
 
