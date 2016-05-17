@@ -3,11 +3,14 @@
   "version": "2.0.0",
   "description": "bind redux action creators function to group",
   "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
     "test": "mocha --compilers js:babel-register --recursive src/**/__test__/*.js",
     "test:watch": "mocha --compilers js:babel-register --recursive --watch src/**/__test__/*.js",
-    "build:lib": "babel src --ignore src/__test__ --out-dir lib ",
-    "postinstall": "npm run build:lib"
+    "build:lib": "babel src --ignore src/__test__ --out-dir lib "
   },
   "repository": {
     "type": "git",
