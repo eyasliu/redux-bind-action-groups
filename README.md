@@ -1,4 +1,4 @@
-bind redux action to group, avoid action generate function name conflict
+bind redux action to group, avoid action generate function name conflict, and compatibility [redux `bindActionCreators`](https://github.com/reactjs/redux/blob/master/src/bindActionCreators.js)
 
 
 [![Build Status](https://travis-ci.org/eyasliu/redux-bind-action-groups.svg?branch=master)](https://travis-ci.org/eyasliu/redux-bind-action-groups)
@@ -10,6 +10,7 @@ bind redux action to group, avoid action generate function name conflict
 npm i -S redux-bind-action-groups
 ```
 
+# example
 
 my two action creator files
 
@@ -30,7 +31,7 @@ export function getList(){
 }
 ```
 
-bind action creator
+bind action creator with redux bindActionCreators
 
 ```js
 import * as postActions from './post';
@@ -48,7 +49,7 @@ function mapDispatchToProps(dispatch){
 this.props.getList();  // which getList will exec in post and photo
 ```
 
-### useage
+## useage
 
 ```js
 import bindActionGroups from 'redux-bind-action-groups';
@@ -56,11 +57,13 @@ import bindActionGroups from 'redux-bind-action-groups';
 function mapDispatchToProps(dispatch){
     return bindActionGroups({
         post: postActions,
-        photo: photoActions
+        photo: photoActions,
+        foo: () => ({type: 'DO_SOMETHING'})
     }, dispatch)
 }
 
-// in React Component
+// in React Component, work fine
 this.props.post.getList();
 this.props.photo.getList();
+this.props.foo()
 ```
