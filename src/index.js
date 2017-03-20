@@ -7,7 +7,7 @@ function makeGroupActionCreators(groups, dispatch){
     for(var i = 0; i < groupKeys.length; i++){
       var key = groupKeys[i]
       var actionCreators = groups[key]
-      if(typeof actionCreators === 'object' ){
+      if(typeof actionCreators === 'object' && actionCreators ){
           groupActionCreators[key] = makeGroupActionCreators(groups[key], dispatch)
       }else if (typeof actionCreators === 'function' && actionCreators) {
           groupActionCreators[key] = bindActionCreators(actionCreators, dispatch)
