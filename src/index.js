@@ -1,4 +1,4 @@
-import bindActionCreators from 'redux/lib/bindActionCreators';
+import { bindActionCreators } from 'redux';
 
 export default function bindActionGroups(actionGroups, dispatch){
   
