@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/eyasliu/redux-bind-action-groups#readme",
   "dependencies": {
-    "redux": "^3.5.2"
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
